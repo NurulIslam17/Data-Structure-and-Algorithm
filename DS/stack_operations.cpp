@@ -114,9 +114,6 @@ int main()
         switch(option)
         {
         case 0:
-            cout<<"Enter the item to push : ";
-            cin>>val;
-            s.push(val);
             break;
         case 1:
             cout<<"Enter the item to push : ";
