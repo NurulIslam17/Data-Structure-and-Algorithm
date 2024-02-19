@@ -37,7 +37,7 @@ class Tree:
             if cur.right is not None:
                queue.append(cur.right)
 
-         btf.append(curr_level)
+         btf.append(list(curr_level))
          left_to_right = not left_to_right
       return btf
 
@@ -50,4 +50,7 @@ if __name__ == "__main__":
    t.root.left.right = Node(9)
    t.root.right.left = Node(10)
    t.root.right.right = Node(5)
+   t.root.left.right.left = Node(12)
+   t.root.left.right.right = Node(13)
+
    print(t.traverse(t.root))
