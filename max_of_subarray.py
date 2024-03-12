@@ -1,3 +1,11 @@
+def maxVal(i, j, nums):
+   maxVal = 0
+   for n in range(i, j + 1):
+      if nums[n] > maxVal:
+         maxVal = nums[n]
+   return maxVal
+
+
 def maximumValOfSubarray(nums, k):
    max_list = []
    i, j = 0, 0
@@ -5,14 +13,10 @@ def maximumValOfSubarray(nums, k):
       if j - i + 1 < k:
          j += 1
       elif j - i + 1 == k:
-         maxVal = 0
-         for n in range(i, j + 1):
-            if nums[n] > maxVal:
-               maxVal = nums[n]
-         max_list.append(maxVal)
+         val = maxVal(i, j, nums)
+         max_list.append(val)
          i += 1
          j += 1
-
    return max_list
 
 
